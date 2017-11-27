@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Altairis.ConventionalMetadataProviders</PackageId>
+    <Authors>Michal Altair Valášek</Authors>
+    <Company>Altairis, s. r. o.</Company>
+    <Description>Convention-based display and validation metadata providers for ASP.NET MVC Core and ASP.NET Razor Pages.</Description>
+    <Copyright>(c) Altairis, 2017</Copyright>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/ridercz/ConventionalMetadataProviders/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/ridercz/ConventionalMetadataProviders/</PackageProjectUrl>
+    <Version>1.0.0-pre01</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.0.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\DefaultBindingMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DefaultBindingMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\DefaultValidationMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DefaultValidationMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\DefaultBindingMessages.cs-CZ.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\DefaultBindingMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultBindingMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\DefaultValidationMessages.cs-CZ.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\DefaultValidationMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultValidationMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

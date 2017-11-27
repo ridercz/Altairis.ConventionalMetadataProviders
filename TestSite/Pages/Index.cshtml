@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+<body>
+    <form method="post">
+        @Html.EditorFor(x => x.Input)
+        <div asp-validation-summary="All"></div>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+    <hr />
+    <ul>
+        <li>Culture: @System.Globalization.CultureInfo.CurrentCulture.Name</li>
+        <li>UI Culture: @System.Globalization.CultureInfo.CurrentUICulture.Name</li>
+    </ul>
+    @*
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+    *@
+    <script src="~/Scripts/validation.min.js" asp-append-version="true"></script>
+    <script>
+        var v = new aspnetValidation.ValidationService();
+        v.bootstrap();
+    </script>
+</body>
+</html>

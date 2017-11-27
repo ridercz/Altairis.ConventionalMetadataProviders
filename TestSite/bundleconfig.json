@@ -1,0 +1,13 @@
+[
+  {
+    "outputFileName": "wwwroot/Scripts/validation.js",
+    "inputFiles": [
+      "node_modules/es6-promise/dist/es6-promise.auto.js",
+      "node_modules/aspnet-validation/dist/aspnet-validation.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "preserveImportantComments": false
+    }
+  }
+]
