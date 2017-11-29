@@ -78,7 +78,15 @@ namespace Altairis.ConventionalMetadataProviders {
         }
 
         private string GetValueFromResource(ModelMetadataIdentity metadataIdentity, string resourceKeySuffix) {
-            var fullPropertyName = string.Join(".", metadataIdentity.ContainerType.FullName, metadataIdentity.Name);
+            if (string.IsNullOrEmpty(metadataIdentity.Name)) return null;
+
+            string fullPropertyName;
+            if (string.IsNullOrEmpty(metadataIdentity.ContainerType?.FullName)) {
+                fullPropertyName = metadataIdentity.ContainerType.FullName + "." + metadataIdentity.Name;
+            }
+            else {
+                fullPropertyName = metadataIdentity.Name;
+            }
 
             // Search by name from more specific to less specific
             var nameParts = fullPropertyName.Split('.', '+');
