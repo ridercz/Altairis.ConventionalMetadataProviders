@@ -27,6 +27,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AdditionalValidation.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\UI.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UI.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +45,13 @@
     <EmbeddedResource Update="Resources\AdditionalValidation.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AdditionalValidation.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\UI.cs-CZ.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\UI.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UI.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
