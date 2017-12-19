@@ -3,13 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Test Page</title>
+    <title>@UI.PageTitle</title>
 </head>
 <body>
+    <h1>@UI.PageTitle</h1>
     <form method="post">
         @Html.EditorFor(x => x.Input)
         <div asp-validation-summary="All"></div>
-        <p><input type="submit" value="Submit" /></p>
+        <p><input type="submit" value="@UI.SubmitButton" /></p>
     </form>
     <hr />
     <ul>
