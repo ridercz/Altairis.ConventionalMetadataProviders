@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CreditCard" xml:space="preserve">
-    <value>Pole {0} musí obsahovat platné číslo platbní karty.</value>
+    <value>Pole {0} musí obsahovat platné číslo platební karty.</value>
   </data>
   <data name="CustomValidation" xml:space="preserve">
     <value>Pole {0} obsahuje neplatnou hodnotu.</value>
