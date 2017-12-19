@@ -13,7 +13,7 @@ namespace TestSite {
 
         public void ConfigureServices(IServiceCollection services) {
             services.AddMvc(options => {
-                options.SetConventionalMetadataProviders(typeof(Resources.Display));
+                options.SetConventionalMetadataProviders<Resources.Display>();
             });
         }
 
