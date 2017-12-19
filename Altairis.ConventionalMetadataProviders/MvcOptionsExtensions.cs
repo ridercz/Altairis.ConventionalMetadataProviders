@@ -10,7 +10,7 @@ namespace Altairis.ConventionalMetadataProviders {
     public static class MvcOptionsExtensions {
 
 
-        public static void SetConventionalMetadataProviders(this MvcOptions options, Type displayMetadataResourceType, Type validationResourceType = null, int maxNamePartsScanCount = 3, Type bindingResourceType = null) {
+        public static void SetConventionalMetadataProviders(this MvcOptions options, Type displayMetadataResourceType, Type validationResourceType = null, Type bindingResourceType = null) {
             if (options == null) throw new ArgumentNullException(nameof(options));
             if (validationResourceType == null) validationResourceType = typeof(Resources.DefaultValidationMessages);
             if (bindingResourceType == null) bindingResourceType = typeof(Resources.DefaultBindingMessages);
@@ -30,7 +30,7 @@ namespace Altairis.ConventionalMetadataProviders {
             options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(s => string.Format(brm.GetString("ValueMustNotBeNull"), s));
 
             // Localize display metadata
-            options.ModelMetadataDetailsProviders.Add(new ConventionalDisplayMetadataProvider(displayMetadataResourceType, maxNamePartsScanCount));
+            options.ModelMetadataDetailsProviders.Add(new ConventionalDisplayMetadataProvider(displayMetadataResourceType));
 
             // Localize validation metadata
             options.ModelMetadataDetailsProviders.Add(new ConventionalValidationMetadataProvider(validationResourceType));
