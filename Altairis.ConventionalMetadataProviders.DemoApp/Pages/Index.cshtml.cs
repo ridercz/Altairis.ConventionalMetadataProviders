@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TestSite.Pages {
+namespace Altairis.ConventionalMetadataProviders.DemoApp.Pages {
     public class IndexModel : PageModel {
 
         [BindProperty]

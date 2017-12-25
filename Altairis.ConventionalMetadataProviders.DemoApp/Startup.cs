@@ -4,7 +4,7 @@ using Altairis.ConventionalMetadataProviders;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 
-namespace TestSite {
+namespace Altairis.ConventionalMetadataProviders.DemoApp {
     public class Startup {
         private static readonly CultureInfo[] _supportedCultures = {
             new CultureInfo("en-US"),

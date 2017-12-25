@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestSite.Resources {
+namespace Altairis.ConventionalMetadataProviders.DemoApp.Resources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace TestSite.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Display {
+    public class UI {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Display() {
+        internal UI() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace TestSite.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TestSite.Resources.Display", typeof(Display).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Altairis.ConventionalMetadataProviders.DemoApp.Resources.UI", typeof(UI).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,74 +61,20 @@ namespace TestSite.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date of birth.
+        ///   Looks up a localized string similar to Test Page.
         /// </summary>
-        public static string BirthDate {
+        public static string PageTitle {
             get {
-                return ResourceManager.GetString("BirthDate", resourceCulture);
+                return ResourceManager.GetString("PageTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to E-mail address.
+        ///   Looks up a localized string similar to Submit.
         /// </summary>
-        public static string Email {
+        public static string SubmitButton {
             get {
-                return ResourceManager.GetString("Email", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Full name.
-        /// </summary>
-        public static string Name {
-            get {
-                return ResourceManager.GetString("Name", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Order number.
-        /// </summary>
-        public static string OrderNumber {
-            get {
-                return ResourceManager.GetString("OrderNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 0000-XXXX.
-        /// </summary>
-        public static string OrderNumber_Placeholder {
-            get {
-                return ResourceManager.GetString("OrderNumber_Placeholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Priority.
-        /// </summary>
-        public static string Priority {
-            get {
-                return ResourceManager.GetString("Priority", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Home page URL.
-        /// </summary>
-        public static string WebSite {
-            get {
-                return ResourceManager.GetString("WebSite", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Weight.
-        /// </summary>
-        public static string Weight {
-            get {
-                return ResourceManager.GetString("Weight", resourceCulture);
+                return ResourceManager.GetString("SubmitButton", resourceCulture);
             }
         }
     }

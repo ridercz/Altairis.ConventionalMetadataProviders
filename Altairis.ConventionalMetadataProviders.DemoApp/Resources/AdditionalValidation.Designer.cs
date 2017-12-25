@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestSite.Resources {
+namespace Altairis.ConventionalMetadataProviders.DemoApp.Resources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace TestSite.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class UI {
+    public class AdditionalValidation {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal UI() {
+        internal AdditionalValidation() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace TestSite.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TestSite.Resources.UI", typeof(UI).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Altairis.ConventionalMetadataProviders.DemoApp.Resources.AdditionalValidation", typeof(AdditionalValidation).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,11 @@ namespace TestSite.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Test Page.
+        ///   Looks up a localized string similar to The {0} field must contain four numbers and four letters separated by dash, ie. 1234-ABCD..
         /// </summary>
-        public static string PageTitle {
+        public static string Regex_OrderNumber {
             get {
-                return ResourceManager.GetString("PageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Submit.
-        /// </summary>
-        public static string SubmitButton {
-            get {
-                return ResourceManager.GetString("SubmitButton", resourceCulture);
+                return ResourceManager.GetString("Regex_OrderNumber", resourceCulture);
             }
         }
     }
