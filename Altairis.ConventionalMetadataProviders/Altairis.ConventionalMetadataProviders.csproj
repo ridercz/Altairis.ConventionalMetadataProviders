@@ -10,8 +10,12 @@
     <Description>Convention-based display and validation metadata providers for ASP.NET MVC Core and ASP.NET Razor Pages.</Description>
     <Copyright>(c) Altairis, 2017</Copyright>
     <PackageLicenseUrl>https://raw.githubusercontent.com/ridercz/ConventionalMetadataProviders/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/ridercz/ConventionalMetadataProviders/</PackageProjectUrl>
-    <Version>1.0.0-pre03</Version>
+    <PackageProjectUrl>https://github.com/ridercz/Altairis.ConventionalMetadataProviders</PackageProjectUrl>
+    <Version>1.0.0-pre04</Version>
+    <Product>Altairis Conventional Metadata Providers</Product>
+    <RepositoryUrl>https://github.com/ridercz/Altairis.ConventionalMetadataProviders.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIconUrl>https://raw.githubusercontent.com/ridercz/Altairis.TagHelpers/master/NuGet-64x64.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
