@@ -12,8 +12,8 @@ namespace Altairis.ConventionalMetadataProviders {
         private readonly Type _resourceType;
 
         public ConventionalDisplayMetadataProvider(Type resourceType) {
-            _resourceType = resourceType ?? throw new ArgumentNullException(nameof(resourceType));
-            _resourceManager = new ResourceManager(resourceType);
+            this._resourceType = resourceType ?? throw new ArgumentNullException(nameof(resourceType));
+            this._resourceManager = new ResourceManager(resourceType);
         }
 
         public void CreateDisplayMetadata(DisplayMetadataProviderContext context) {
@@ -22,6 +22,9 @@ namespace Altairis.ConventionalMetadataProviders {
             this.UpdateDisplayName(context);
             this.UpdateDescription(context);
             this.UpdatePlaceholder(context);
+            this.UpdateNullDisplayText(context);
+            this.UpdateDisplayFormatString(context);
+            this.UpdateEditorFormatString(context);
         }
 
         private void UpdateDisplayName(DisplayMetadataProviderContext context) {
@@ -33,7 +36,7 @@ namespace Altairis.ConventionalMetadataProviders {
 
             // Try get resource key name
             var keyName = this.GetResourceKeyName(context.Key, "Name") ?? this.GetResourceKeyName(context.Key, null);
-            if (keyName != null) context.DisplayMetadata.DisplayName = () => _resourceManager.GetString(keyName);
+            if (keyName != null) context.DisplayMetadata.DisplayName = () => this._resourceManager.GetString(keyName);
         }
 
         private void UpdateDescription(DisplayMetadataProviderContext context) {
@@ -42,7 +45,7 @@ namespace Altairis.ConventionalMetadataProviders {
 
             // Try get resource key name
             var keyName = this.GetResourceKeyName(context.Key, "Description");
-            if (keyName != null) context.DisplayMetadata.Description = () => _resourceManager.GetString(keyName);
+            if (keyName != null) context.DisplayMetadata.Description = () => this._resourceManager.GetString(keyName);
         }
 
         private void UpdatePlaceholder(DisplayMetadataProviderContext context) {
@@ -51,7 +54,22 @@ namespace Altairis.ConventionalMetadataProviders {
 
             // Try get resource key name
             var keyName = this.GetResourceKeyName(context.Key, "Placeholder");
-            if (keyName != null) context.DisplayMetadata.Placeholder = () => _resourceManager.GetString(keyName);
+            if (keyName != null) context.DisplayMetadata.Placeholder = () => this._resourceManager.GetString(keyName);
+        }
+
+        private void UpdateNullDisplayText(DisplayMetadataProviderContext context) {
+            var keyName = this.GetResourceKeyName(context.Key, "Null");
+            if (keyName != null) context.DisplayMetadata.NullDisplayTextProvider = () => this._resourceManager.GetString(keyName);
+        }
+
+        private void UpdateDisplayFormatString(DisplayMetadataProviderContext context) {
+            var keyName = this.GetResourceKeyName(context.Key, "DisplayFormat");
+            if (keyName != null) context.DisplayMetadata.DisplayFormatStringProvider = () => this._resourceManager.GetString(keyName);
+        }
+
+        private void UpdateEditorFormatString(DisplayMetadataProviderContext context) {
+            var keyName = this.GetResourceKeyName(context.Key, "EditFormat");
+            if (keyName != null) context.DisplayMetadata.EditFormatStringProvider = () => this._resourceManager.GetString(keyName);
         }
 
         private string GetResourceKeyName(ModelMetadataIdentity metadataIdentity, string resourceKeySuffix) {
@@ -67,13 +85,13 @@ namespace Altairis.ConventionalMetadataProviders {
 
             // Search by name from more specific to less specific
             var nameParts = fullPropertyName.Split('.', '+');
-            for (int i = 0; i < nameParts.Length; i++) {
+            for (var i = 0; i < nameParts.Length; i++) {
                 // Get the resource key to lookup
                 var resourceKeyName = string.Join("_", nameParts.Skip(i));
                 if (!string.IsNullOrWhiteSpace(resourceKeySuffix)) resourceKeyName += "_" + resourceKeySuffix;
 
                 // Check if given value exists in resource
-                var keyExists = !string.IsNullOrWhiteSpace(_resourceManager.GetString(resourceKeyName));
+                var keyExists = !string.IsNullOrWhiteSpace(this._resourceManager.GetString(resourceKeyName));
                 if (keyExists) return resourceKeyName;
             }
 

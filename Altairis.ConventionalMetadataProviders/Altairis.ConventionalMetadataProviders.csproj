@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -11,7 +11,7 @@
     <Copyright>(c) Altairis, 2017-2018</Copyright>
     <PackageLicenseUrl>https://raw.githubusercontent.com/ridercz/ConventionalMetadataProviders/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/ridercz/Altairis.ConventionalMetadataProviders</PackageProjectUrl>
-    <Version>1.0.0-pre05</Version>
+    <Version>1.0.0-pre06</Version>
     <Product>Altairis Conventional Metadata Providers</Product>
     <RepositoryUrl>https://github.com/ridercz/Altairis.ConventionalMetadataProviders.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -19,8 +19,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.0.2" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.2" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
