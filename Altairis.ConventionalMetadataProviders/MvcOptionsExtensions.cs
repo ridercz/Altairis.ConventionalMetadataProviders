@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Altairis.ConventionalMetadataProviders {
     public static class MvcOptionsExtensions {
-
 
         public static void SetConventionalMetadataProviders<TDisplayResource>(this MvcOptions options) {
             options.SetConventionalMetadataProviders(typeof(TDisplayResource));
@@ -17,7 +12,8 @@ namespace Altairis.ConventionalMetadataProviders {
         public static void SetConventionalMetadataProviders<TDisplayResource, TValidationResource>(this MvcOptions options) {
             options.SetConventionalMetadataProviders(typeof(TDisplayResource), typeof(TValidationResource));
         }
-                public static void SetConventionalMetadataProviders<TDisplayResource, TValidationResource, TBindingResource>(this MvcOptions options) {
+
+        public static void SetConventionalMetadataProviders<TDisplayResource, TValidationResource, TBindingResource>(this MvcOptions options) {
             options.SetConventionalMetadataProviders(typeof(TDisplayResource), typeof(TValidationResource), typeof(TBindingResource));
         }
 

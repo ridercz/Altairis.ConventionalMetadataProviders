@@ -8,15 +8,15 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
 namespace Altairis.ConventionalMetadataProviders {
     public class ConventionalValidationMetadataProvider : IValidationMetadataProvider {
         private const string AttributeNameSuffix = "Attribute";
-        private ResourceManager _resourceManager;
-        private Type _resourceType;
+        private readonly ResourceManager _resourceManager;
+        private readonly Type _resourceType;
 
         public ConventionalValidationMetadataProvider() : this(typeof(Resources.DefaultValidationMessages)) {
         }
 
         public ConventionalValidationMetadataProvider(Type resourceType) {
-            _resourceType = resourceType ?? throw new ArgumentNullException(nameof(resourceType));
-            _resourceManager = new ResourceManager(resourceType);
+            this._resourceType = resourceType ?? throw new ArgumentNullException(nameof(resourceType));
+            this._resourceManager = new ResourceManager(resourceType);
         }
 
         public void CreateValidationMetadata(ValidationMetadataProviderContext context) {
@@ -40,8 +40,8 @@ namespace Altairis.ConventionalMetadataProviders {
                 if (attributeName.EndsWith(AttributeNameSuffix, StringComparison.Ordinal)) attributeName = attributeName.Substring(0, attributeName.Length - AttributeNameSuffix.Length);
 
                 // Link to resource if exists
-                if (_resourceManager.GetString(attributeName) != null) {
-                    validationAttribute.ErrorMessageResourceType = _resourceType;
+                if (this._resourceManager.GetString(attributeName) != null) {
+                    validationAttribute.ErrorMessageResourceType = this._resourceType;
                     validationAttribute.ErrorMessageResourceName = attributeName;
                     validationAttribute.ErrorMessage = null;
                 } else {

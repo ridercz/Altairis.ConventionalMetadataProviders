@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Resources;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
-using Microsoft.Extensions.Logging;
 
 namespace Altairis.ConventionalMetadataProviders {
     public class ConventionalDisplayMetadataProvider : IDisplayMetadataProvider {
@@ -78,8 +77,7 @@ namespace Altairis.ConventionalMetadataProviders {
             string fullPropertyName;
             if (!string.IsNullOrEmpty(metadataIdentity.ContainerType?.FullName)) {
                 fullPropertyName = metadataIdentity.ContainerType.FullName + "." + metadataIdentity.Name;
-            }
-            else {
+            } else {
                 fullPropertyName = metadataIdentity.Name;
             }
 
