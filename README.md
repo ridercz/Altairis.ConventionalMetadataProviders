@@ -14,3 +14,9 @@ The purpose of **Altairis Conventional Metadata Providers** is to allow specifyi
 ## Documentation
 
 See the [project wiki pages](https://github.com/ridercz/Altairis.ConventionalMetadataProviders/wiki) for instructions and documentation.
+
+## Contributor Code of Conduct
+
+This project adheres to No Code of Conduct. We are all adults. We accept anyone's contributions. Nothing else matters.
+
+For more information please visit the [No Code of Conduct](https://github.com/domgetter/NCoC) homepage.
