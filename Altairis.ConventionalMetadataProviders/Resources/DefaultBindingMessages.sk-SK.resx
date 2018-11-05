@@ -118,36 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AttemptedValueIsInvalid" xml:space="preserve">
-    <value>Hodnota '{0}' není platná pro pole {1}.</value>
+    <value>Hodnota '{0}' nie je platná pre pole {1}.</value>
   </data>
   <data name="MissingBindRequiredValue" xml:space="preserve">
-    <value>Nebyla zadána hodnota pro vlastnost '{0}'.</value>
+    <value>Nebola zadaná hodnota pre vlastnosť '{0}'.</value>
   </data>
   <data name="MissingKeyOrValue" xml:space="preserve">
-    <value>Je vyžadována hodnota.</value>
+    <value>Vyžaduje sa hodnota.</value>
   </data>
   <data name="MissingRequestBodyRequiredValue" xml:space="preserve">
-    <value>Je vyžadováno neprázdné tělo požadavku.</value>
+    <value>Vyžaduje sa neprázdne telo požiadavky.</value>
   </data>
   <data name="NonPropertyAttemptedValueIsInvalid" xml:space="preserve">
-    <value>Hodnota '{0}' není platná.</value>
+    <value>Hodnota '{0}' nie je platná.</value>
   </data>
   <data name="NonPropertyUnknownValueIsInvalid" xml:space="preserve">
-    <value>Zadaná hodnota není platná.</value>
+    <value>Zadaná hodnota nie je platná.</value>
   </data>
   <data name="NonPropertyValueMustBeANumber" xml:space="preserve">
-    <value>Pole musí být číslo.</value>
+    <value>Pole musí byť číslo.</value>
   </data>
   <data name="UnknownValueIsInvalid" xml:space="preserve">
-    <value>Zadaná hodnota není platná pro pole {0}.</value>
+    <value>Zadaná hodnota nie je platná pre pole {0}.</value>
   </data>
   <data name="ValueIsInvalid" xml:space="preserve">
-    <value>Hodnota '{0}' není platná.</value>
+    <value>Hodnota '{0}' nie je platná.</value>
   </data>
   <data name="ValueMustBeANumber" xml:space="preserve">
-    <value>Pole {0} musí být číslo.</value>
+    <value>Pole {0} musí byť číslo.</value>
   </data>
   <data name="ValueMustNotBeNull" xml:space="preserve">
-    <value>Hodnota '{0}' není platná.</value>
+    <value>Hodnota '{0}' nie je platná.</value>
   </data>
 </root>
