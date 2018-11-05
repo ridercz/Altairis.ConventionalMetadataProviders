@@ -127,7 +127,7 @@
     <value>A value is required.</value>
   </data>
   <data name="MissingRequestBodyRequiredValue" xml:space="preserve">
-    <value> A non-empty request body is required.</value>
+    <value>A non-empty request body is required.</value>
   </data>
   <data name="NonPropertyAttemptedValueIsInvalid" xml:space="preserve">
     <value>The value '{0}' is not valid.</value>
