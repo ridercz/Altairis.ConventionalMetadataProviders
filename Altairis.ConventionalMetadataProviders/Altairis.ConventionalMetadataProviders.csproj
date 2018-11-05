@@ -19,16 +19,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Resources\DefaultBindingMessages.sk-SK.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\DefaultBindingMessages.sk-SK.resx">
+      <Generator></Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.3" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Resources\DefaultBindingMessages.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>DefaultBindingMessages.resx</DependentUpon>
-    </Compile>
     <Compile Update="Resources\DefaultValidationMessages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
