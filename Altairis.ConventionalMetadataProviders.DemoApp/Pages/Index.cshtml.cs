@@ -20,6 +20,9 @@ namespace Altairis.ConventionalMetadataProviders.DemoApp.Pages {
             [Required, EmailAddress]
             public string Email { get; set; }
 
+            [Phone]
+            public string Phone { get; set; }
+
             [Required, Range(1, 100)]
             public int Priority { get; set; }
 
