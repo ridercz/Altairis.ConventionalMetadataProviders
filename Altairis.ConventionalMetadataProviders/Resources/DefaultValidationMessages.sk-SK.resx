@@ -117,31 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BirthDate" xml:space="preserve">
-    <value>Datum narození</value>
+  <data name="CreditCard" xml:space="preserve">
+    <value>Pole {0} musí obsahovať platné číslo platobnej karty.</value>
   </data>
-  <data name="Email" xml:space="preserve">
-    <value>E-mailová adresa</value>
+  <data name="CustomValidation" xml:space="preserve">
+    <value>Pole {0} obsahuje neplatnú hodnotu.</value>
   </data>
-  <data name="Name" xml:space="preserve">
-    <value>Jméno a příjmení</value>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Pole {0} musí obsahovať platnú e-mailovú adresu.</value>
   </data>
-  <data name="OrderNumber" xml:space="preserve">
-    <value>Číslo objednávky</value>
+  <data name="FileExtensions" xml:space="preserve">
+    <value>Pole {0} môže obsahovať iba súbory s nasledujúcimi príponami: {1}</value>
   </data>
-  <data name="OrderNumber_Placeholder" xml:space="preserve">
-    <value>0000-XXXX</value>
+  <data name="MaxLength" xml:space="preserve">
+    <value>Pole {0} môže mať najviac {1} znakov.</value>
+  </data>
+  <data name="MinLength" xml:space="preserve">
+    <value>Pole {0} musí mať najmenej {1} znakov.</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Telefonní číslo</value>
+    <value>Pole {0} musí byť platné telefónne číslo.</value>
   </data>
-  <data name="Priority" xml:space="preserve">
-    <value>Priorita</value>
+  <data name="Range" xml:space="preserve">
+    <value>Pole {0} musí mať hodnotu od {1} do {2}.</value>
   </data>
-  <data name="WebSite" xml:space="preserve">
-    <value>Domovská stránka</value>
+  <data name="Regex" xml:space="preserve">
+    <value>Pole {0} musí vyhovovať regulárnemu výrazu '{1}'.</value>
   </data>
-  <data name="Weight" xml:space="preserve">
-    <value>Váha</value>
+  <data name="Required" xml:space="preserve">
+    <value>Pole {0} je povinné.</value>
+  </data>
+  <data name="StringLength" xml:space="preserve">
+    <value>Pole {0} musí mať dĺžku mezi {2} a {1} znakmi.</value>
+  </data>
+  <data name="Url" xml:space="preserve">
+    <value>Pole {0} musí obsahovať platnú HTTP, HTTPS alebo FTP adresu.</value>
   </data>
 </root>

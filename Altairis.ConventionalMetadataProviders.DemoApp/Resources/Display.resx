@@ -132,6 +132,9 @@
   <data name="OrderNumber_Placeholder" xml:space="preserve">
     <value>0000-XXXX</value>
   </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
   <data name="Priority" xml:space="preserve">
     <value>Priority</value>
   </data>
