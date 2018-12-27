@@ -1,3 +1,5 @@
+[![NuGet Status](https://img.shields.io/nuget/v/Altairis.ConventionalMetadataProviders.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/Altairis.ConventionalMetadataProviders/)
+
 The purpose of **Altairis Conventional Metadata Providers** is to allow specifying metadata for validation and dynamic UI generation in single resource file for entire application. It's spiritual successor of Phil Haack's [model metadata extensions](https://haacked.com/archive/2011/07/14/model-metadata-and-validation-localization-using-conventions.aspx/) library from classic .NET in the world of .NET Core.
 
 ## Features
