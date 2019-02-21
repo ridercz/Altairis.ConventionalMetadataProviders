@@ -23,7 +23,7 @@ namespace Altairis.ConventionalMetadataProviders {
             if (context == null) throw new ArgumentNullException(nameof(context));
 
             // Add Required attribute to value types to simplify localization
-            if (context.Key.ModelType.GetTypeInfo().IsValueType && !context.ValidationMetadata.ValidatorMetadata.OfType<RequiredAttribute>().Any()) {
+            if (context.Key.ModelType.GetTypeInfo().IsValueType && Nullable.GetUnderlyingType(context.Key.ModelType.GetTypeInfo()) == null && !context.ValidationMetadata.ValidatorMetadata.OfType<RequiredAttribute>().Any()) {
                 context.ValidationMetadata.ValidatorMetadata.Add(new RequiredAttribute());
             }
 
