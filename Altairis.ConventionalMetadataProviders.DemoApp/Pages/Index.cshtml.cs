@@ -32,7 +32,7 @@ namespace Altairis.ConventionalMetadataProviders.DemoApp.Pages {
             [Url]
             public string WebSite { get; set; }
 
-            [RegularExpression(@"^\d{4}-[A-Z]{4}$", ErrorMessageResourceName = "Regex_OrderNumber", ErrorMessageResourceType = typeof(Resources.AdditionalValidation)), MaxLength(9)]
+            [RegularExpression(@"^\d{4}-[A-Z]{4}$", ErrorMessageResourceName = "OrderNumber_RegularExpression", ErrorMessageResourceType = typeof(Resources.AdditionalValidation)), MaxLength(9)]
             public string OrderNumber { get; set; }
 
             public float Weight { get; set; }

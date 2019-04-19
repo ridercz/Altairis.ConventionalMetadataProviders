@@ -19,7 +19,7 @@ namespace Altairis.ConventionalMetadataProviders.DemoApp.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class AdditionalValidation {
@@ -63,9 +63,9 @@ namespace Altairis.ConventionalMetadataProviders.DemoApp.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The {0} field must contain four numbers and four letters separated by dash, ie. 1234-ABCD..
         /// </summary>
-        public static string Regex_OrderNumber {
+        public static string OrderNumber_RegularExpression {
             get {
-                return ResourceManager.GetString("Regex_OrderNumber", resourceCulture);
+                return ResourceManager.GetString("OrderNumber_RegularExpression", resourceCulture);
             }
         }
     }

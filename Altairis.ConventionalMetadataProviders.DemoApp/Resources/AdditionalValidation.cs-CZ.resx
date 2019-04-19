@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Regex_OrderNumber" xml:space="preserve">
+  <data name="OrderNumber_RegularExpression" xml:space="preserve">
     <value>Pole {0} musí obsahovat čtyři číslice a čtyři písmena oddělená pomlčkou, např. 1234-ABCD.</value>
   </data>
 </root>

@@ -141,7 +141,7 @@
   <data name="Range" xml:space="preserve">
     <value>The {0} field must contain value from {1} to {2}.</value>
   </data>
-  <data name="Regex" xml:space="preserve">
+  <data name="RegularExpression" xml:space="preserve">
     <value>The {0} field must contain value conforming to regular expression '{1}'.</value>
   </data>
   <data name="Required" xml:space="preserve">

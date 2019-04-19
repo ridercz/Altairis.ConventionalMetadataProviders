@@ -141,7 +141,7 @@
   <data name="Range" xml:space="preserve">
     <value>Pole {0} musí mít hodnotu od {1} do {2}.</value>
   </data>
-  <data name="Regex" xml:space="preserve">
+  <data name="RegularExpression" xml:space="preserve">
     <value>Pole {0} musí odpovídat regulárnímu výrazu '{1}'.</value>
   </data>
   <data name="Required" xml:space="preserve">

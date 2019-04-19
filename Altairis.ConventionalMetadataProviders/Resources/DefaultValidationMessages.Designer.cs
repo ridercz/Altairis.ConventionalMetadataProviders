@@ -19,7 +19,7 @@ namespace Altairis.ConventionalMetadataProviders.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class DefaultValidationMessages {
@@ -135,9 +135,9 @@ namespace Altairis.ConventionalMetadataProviders.Resources {
         /// <summary>
         ///   Looks up a localized string similar to The {0} field must contain value conforming to regular expression &apos;{1}&apos;..
         /// </summary>
-        public static string Regex {
+        public static string RegularExpression {
             get {
-                return ResourceManager.GetString("Regex", resourceCulture);
+                return ResourceManager.GetString("RegularExpression", resourceCulture);
             }
         }
         
