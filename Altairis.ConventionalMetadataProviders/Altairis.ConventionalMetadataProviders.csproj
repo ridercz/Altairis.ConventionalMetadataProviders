@@ -8,10 +8,10 @@
     <Authors>Michal Altair Valášek</Authors>
     <Company>Altairis, s. r. o.</Company>
     <Description>Convention-based display and validation metadata providers for ASP.NET MVC Core and ASP.NET Razor Pages.</Description>
-    <Copyright>(c) Altairis, 2017-2018</Copyright>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/ridercz/ConventionalMetadataProviders/master/LICENSE</PackageLicenseUrl>
+    <Copyright>(c) Altairis, 2017-2019</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ridercz/Altairis.ConventionalMetadataProviders</PackageProjectUrl>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Product>Altairis Conventional Metadata Providers</Product>
     <RepositoryUrl>https://github.com/ridercz/Altairis.ConventionalMetadataProviders.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
