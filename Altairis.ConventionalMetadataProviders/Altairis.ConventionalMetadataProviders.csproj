@@ -37,6 +37,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\DefaultBindingMessages.fr-CA.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\DefaultBindingMessages.fr-FR.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\DefaultBindingMessages.cs-CZ.resx">
       <Generator></Generator>
     </EmbeddedResource>
