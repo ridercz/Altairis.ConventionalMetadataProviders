@@ -37,6 +37,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\DefaultBindingMessages.fr-FR.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\DefaultBindingMessages.cs-CZ.resx">
       <Generator></Generator>
     </EmbeddedResource>
@@ -51,6 +54,9 @@
       <Generator></Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\DefaultValidationMessages.sk-SK.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\DefaultValidationMessages.fr-FR.resx">
       <Generator></Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\DefaultValidationMessages.resx">
