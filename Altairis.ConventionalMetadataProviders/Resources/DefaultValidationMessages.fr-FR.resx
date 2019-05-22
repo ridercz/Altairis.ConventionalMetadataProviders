@@ -117,37 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AttemptedValueIsInvalid" xml:space="preserve">
-    <value>La valeur '{0}' n'est pas valide pour {1}.</value>
+  <data name="CreditCard" xml:space="preserve">
+    <value>Le champ {0} doit contenir un numéro de carte valide.</value>
   </data>
-  <data name="MissingBindRequiredValue" xml:space="preserve">
-    <value>Une valeur pour la propriété '{0}' n'est pas fournie.</value>
+  <data name="CustomValidation" xml:space="preserve">
+    <value>Le champ {0} est invalide.</value>
   </data>
-  <data name="MissingKeyOrValue" xml:space="preserve">
-    <value>Une valeur est requise.</value>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>Le champ {0} doit contenir une adresse courriel valide.</value>
   </data>
-  <data name="MissingRequestBodyRequiredValue" xml:space="preserve">
-    <value>Un corps de requête non vide est requis.</value>
+  <data name="FileExtensions" xml:space="preserve">
+    <value>Le champ {0} peut seulement contenir des fichiers avec les extensions suivantes : {1}</value>
   </data>
-  <data name="NonPropertyAttemptedValueIsInvalid" xml:space="preserve">
-    <value>La valeur '{0}' est invalide.</value>
+  <data name="MaxLength" xml:space="preserve">
+    <value>Le champ {0} ne peut dépasser {1} caractère(s).</value>
   </data>
-  <data name="NonPropertyUnknownValueIsInvalid" xml:space="preserve">
-    <value>La valeur fournie est invalide.</value>
+  <data name="MinLength" xml:space="preserve">
+    <value>Le champ {0} doit contenir au moins {1} caractère(s).</value>
   </data>
-  <data name="NonPropertyValueMustBeANumber" xml:space="preserve">
-    <value>Le champ doit être un nombre.</value>
+  <data name="Phone" xml:space="preserve">
+    <value>Le champ {0} doit contenir un numéro de téléphone valide.</value>
   </data>
-  <data name="UnknownValueIsInvalid" xml:space="preserve">
-    <value>La valeur fournie est invalide pour {0}.</value>
+  <data name="Range" xml:space="preserve">
+    <value>Le champ {0} doit contenir une valeur entre {1} et {2}.</value>
   </data>
-  <data name="ValueIsInvalid" xml:space="preserve">
-    <value>La valeur '{0}' est invalide.</value>
+  <data name="RegularExpression" xml:space="preserve">
+    <value>Le champ {0} doit respecter l'expression régulière '{1}'.</value>
   </data>
-  <data name="ValueMustBeANumber" xml:space="preserve">
-    <value>Le champ {0} doit être un nombre.</value>
+  <data name="Required" xml:space="preserve">
+    <value>Le champ {0} est obligatoire.</value>
   </data>
-  <data name="ValueMustNotBeNull" xml:space="preserve">
-    <value>La valeur '{0}' est invalide.</value>
+  <data name="StringLength" xml:space="preserve">
+    <value>Le champ {0} doit être long de {2} à {1} caractère(s).</value>
+  </data>
+  <data name="Url" xml:space="preserve">
+    <value>Le champ {0} doit contenir une adresse HTTP, HTTPS ou FTP valide.</value>
   </data>
 </root>
