@@ -34,7 +34,7 @@ namespace Altairis.ConventionalMetadataProviders {
             if (context.Attributes.OfType<DisplayAttribute>().Any(x => !string.IsNullOrWhiteSpace(x.Name))) return;
 
             // Try get resource key name
-            var keyName = this.GetResourceKeyName(context.Key, "Name") ?? this.GetResourceKeyName(context.Key, null);
+            var keyName = this._resourceManager.GetResourceKeyName(context.Key, "Name") ?? this._resourceManager.GetResourceKeyName(context.Key, null);
             if (keyName != null) context.DisplayMetadata.DisplayName = () => this._resourceManager.GetString(keyName);
         }
 
@@ -43,7 +43,7 @@ namespace Altairis.ConventionalMetadataProviders {
             if (context.Attributes.OfType<DisplayAttribute>().Any(x => !string.IsNullOrWhiteSpace(x.Description))) return;
 
             // Try get resource key name
-            var keyName = this.GetResourceKeyName(context.Key, "Description");
+            var keyName = this._resourceManager.GetResourceKeyName(context.Key, "Description");
             if (keyName != null) context.DisplayMetadata.Description = () => this._resourceManager.GetString(keyName);
         }
 
@@ -52,50 +52,25 @@ namespace Altairis.ConventionalMetadataProviders {
             if (context.Attributes.OfType<DisplayAttribute>().Any(x => !string.IsNullOrWhiteSpace(x.Prompt))) return;
 
             // Try get resource key name
-            var keyName = this.GetResourceKeyName(context.Key, "Placeholder");
+            var keyName = this._resourceManager.GetResourceKeyName(context.Key, "Placeholder");
             if (keyName != null) context.DisplayMetadata.Placeholder = () => this._resourceManager.GetString(keyName);
         }
 
         private void UpdateNullDisplayText(DisplayMetadataProviderContext context) {
-            var keyName = this.GetResourceKeyName(context.Key, "Null");
+            var keyName = this._resourceManager.GetResourceKeyName(context.Key, "Null");
             if (keyName != null) context.DisplayMetadata.NullDisplayTextProvider = () => this._resourceManager.GetString(keyName);
         }
 
         private void UpdateDisplayFormatString(DisplayMetadataProviderContext context) {
-            var keyName = this.GetResourceKeyName(context.Key, "DisplayFormat");
+            var keyName = this._resourceManager.GetResourceKeyName(context.Key, "DisplayFormat");
             if (keyName != null) context.DisplayMetadata.DisplayFormatStringProvider = () => this._resourceManager.GetString(keyName);
         }
 
         private void UpdateEditorFormatString(DisplayMetadataProviderContext context) {
-            var keyName = this.GetResourceKeyName(context.Key, "EditFormat");
+            var keyName = this._resourceManager.GetResourceKeyName(context.Key, "EditFormat");
             if (keyName != null) context.DisplayMetadata.EditFormatStringProvider = () => this._resourceManager.GetString(keyName);
         }
 
-        private string GetResourceKeyName(ModelMetadataIdentity metadataIdentity, string resourceKeySuffix) {
-            if (string.IsNullOrEmpty(metadataIdentity.Name)) return null;
-
-            string fullPropertyName;
-            if (!string.IsNullOrEmpty(metadataIdentity.ContainerType?.FullName)) {
-                fullPropertyName = metadataIdentity.ContainerType.FullName + "." + metadataIdentity.Name;
-            } else {
-                fullPropertyName = metadataIdentity.Name;
-            }
-
-            // Search by name from more specific to less specific
-            var nameParts = fullPropertyName.Split('.', '+');
-            for (var i = 0; i < nameParts.Length; i++) {
-                // Get the resource key to lookup
-                var resourceKeyName = string.Join("_", nameParts.Skip(i));
-                if (!string.IsNullOrWhiteSpace(resourceKeySuffix)) resourceKeyName += "_" + resourceKeySuffix;
-
-                // Check if given value exists in resource
-                var keyExists = !string.IsNullOrWhiteSpace(this._resourceManager.GetString(resourceKeyName));
-                if (keyExists) return resourceKeyName;
-            }
-
-            // Not found
-            return null;
-        }
 
     }
 }
