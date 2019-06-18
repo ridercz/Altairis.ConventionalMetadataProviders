@@ -11,7 +11,7 @@
     <Copyright>(c) Altairis, 2017-2019</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/ridercz/Altairis.ConventionalMetadataProviders</PackageProjectUrl>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <Product>Altairis Conventional Metadata Providers</Product>
     <RepositoryUrl>https://github.com/ridercz/Altairis.ConventionalMetadataProviders.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -37,27 +37,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\DefaultBindingMessages.fr-FR.resx">
-      <Generator></Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\DefaultBindingMessages.cs-CZ.resx">
-      <Generator></Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\DefaultBindingMessages.sk-SK.resx">
-      <Generator></Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resources\DefaultBindingMessages.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DefaultBindingMessages.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\DefaultValidationMessages.cs-CZ.resx">
-      <Generator></Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\DefaultValidationMessages.sk-SK.resx">
-      <Generator></Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\DefaultValidationMessages.fr-FR.resx">
-      <Generator></Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\DefaultValidationMessages.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
