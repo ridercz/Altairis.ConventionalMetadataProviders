@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,42 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Compare" xml:space="preserve">
-    <value>Pole '{0}' a '{1}' nesouhlasí.</value>
+    <value>'{0}' og '{1}' er ikke like.</value>
   </data>
   <data name="CreditCard" xml:space="preserve">
-    <value>Pole {0} musí obsahovat platné číslo platební karty.</value>
-  </data>
-  <data name="CustomValidation" xml:space="preserve">
-    <value>Pole {0} obsahuje neplatnou hodnotu.</value>
+    <value>Feltet {0} inneholder ikke et gyldig kredittkortnummer.</value>
   </data>
   <data name="EmailAddress" xml:space="preserve">
-    <value>Pole {0} musí obsahovat platnou e-mailovou adresu.</value>
+    <value>Feltet {0} inneholder ikke en gyldig e-postadresse.</value>
   </data>
   <data name="FileExtensions" xml:space="preserve">
-    <value>Pole {0} smí obsahovat pouze soubory s následujícími příponami: {1}</value>
+    <value>Feltet {0} tillater kun filer med følgende filendinger: {1}</value>
   </data>
   <data name="MaxLength" xml:space="preserve">
-    <value>Pole {0} smí mít nejvýše {1} znaků.</value>
+    <value>Feltet {0} må være av typen string eller array og ikke lengre enn '{1}'.</value>
   </data>
   <data name="MinLength" xml:space="preserve">
-    <value>Pole {0} musí mít nejméně {1} znaků.</value>
+    <value>Feltet {0} må være av typen string eller array med minimumlengde '{1}'.</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Pole {0} musí být platné telefonní číslo.</value>
+    <value>Feltet {0} inneholder ikke et gyldig telefonnummer.</value>
   </data>
   <data name="Range" xml:space="preserve">
-    <value>Pole {0} musí mít hodnotu od {1} do {2}.</value>
+    <value>Feltet {0} må være mellom {1} og {2}.</value>
   </data>
   <data name="RegularExpression" xml:space="preserve">
-    <value>Pole {0} musí odpovídat regulárnímu výrazu '{1}'.</value>
+    <value>Feltet {0} må samsvare med det regulære uttrykket (regex): '{1}'.</value>
   </data>
   <data name="Required" xml:space="preserve">
-    <value>Pole {0} je povinné.</value>
+    <value>Feltet {0} er påkrevd.</value>
   </data>
   <data name="StringLength" xml:space="preserve">
-    <value>Pole {0} musí mít délku mezi {2} a {1} znaky.</value>
+    <value>Feltet {0} kan ikke ha mer enn {1} tegn.</value>
   </data>
-  <data name="Url" xml:space="preserve">
-    <value>Pole {0} musí obsahovat platnou HTTP, HTTPS nebo FTP adresu.</value>
+    <data name="Url" xml:space="preserve">
+    <value>Feltet {0} er ikke en gyldig, fullt kvalifisert http-, https-, eller ftp-URL.</value>
   </data>
 </root>

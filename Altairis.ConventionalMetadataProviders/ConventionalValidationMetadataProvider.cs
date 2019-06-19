@@ -40,12 +40,13 @@ namespace Altairis.ConventionalMetadataProviders {
                 if (attributeName.EndsWith(AttributeNameSuffix, StringComparison.Ordinal)) attributeName = attributeName.Substring(0, attributeName.Length - AttributeNameSuffix.Length);
 
                 // Link to resource if exists
-                if (this._resourceManager.GetString(attributeName) != null) {
+                var resourceKey = this._resourceManager.GetResourceKeyName(context.Key, attributeName);
+                if (resourceKey != null) {
                     validationAttribute.ErrorMessageResourceType = this._resourceType;
                     validationAttribute.ErrorMessageResourceName = attributeName;
                     validationAttribute.ErrorMessage = null;
                 } else {
-                    validationAttribute.ErrorMessage = $"Missing resource key '{attributeName}'.";
+                    validationAttribute.ErrorMessage = $"Missing resource key for '{attributeName}'.";
                 }
 
             }

@@ -61,6 +61,15 @@ namespace Altairis.ConventionalMetadataProviders.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; and &apos;{1}&apos; do not match..
+        /// </summary>
+        public static string Compare {
+            get {
+                return ResourceManager.GetString("Compare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The {0} field must contain valid card number..
         /// </summary>
         public static string CreditCard {
