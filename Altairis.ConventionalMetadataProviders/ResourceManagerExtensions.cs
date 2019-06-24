@@ -24,8 +24,7 @@ namespace Altairis.ConventionalMetadataProviders {
                 if (!string.IsNullOrWhiteSpace(resourceKeySuffix)) resourceKeyName += "_" + resourceKeySuffix;
 
                 // Check if given value exists in resource
-                var keyExists = !string.IsNullOrWhiteSpace(resourceManager.GetString(resourceKeyName));
-                if (keyExists) return resourceKeyName;
+                if (resourceManager.GetString(resourceKeyName) != null) return resourceKeyName;
             }
 
             // Not found
