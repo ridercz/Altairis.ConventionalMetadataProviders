@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Compare" xml:space="preserve">
+    <value>{0} 欄位 及 {1} 欄位 的資料不一致.</value>
+  </data>
   <data name="CreditCard" xml:space="preserve">
     <value>{0} 欄位 不是正確的信用卡卡號格式.</value>
   </data>
