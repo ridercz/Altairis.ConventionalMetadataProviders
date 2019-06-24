@@ -26,11 +26,13 @@ namespace Altairis.ConventionalMetadataProviders {
             }
 
             // Search by name from more specific to less specific
-            var nameParts = fullPropertyName.Split('.', '+');
-            for (var i = 0; i < nameParts.Length; i++) {
+            var resourceKeyName = fullPropertyName.Replace('.', '_').Replace('+', '_');
+            var namePartsCount = resourceKeyName.Length - resourceKeyName.Replace("_", string.Empty).Length + 1;
+            resourceKeyName += resourceKeySuffix;
+
+            for (var i = 0; i < namePartsCount; i++) {
                 // Get the resource key to lookup
-                var resourceKeyName = string.Join("_", nameParts.Skip(i));
-                resourceKeyName += resourceKeySuffix;
+                if (i > 0) resourceKeyName = resourceKeyName.Substring(resourceKeyName.IndexOf("_") + 1);
 
                 // Check if given value exists in resource
                 if (resourceManager.GetString(resourceKeyName) != null) return resourceKeyName;
