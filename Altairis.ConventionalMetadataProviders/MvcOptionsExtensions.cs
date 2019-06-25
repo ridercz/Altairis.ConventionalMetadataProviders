@@ -5,17 +5,14 @@ using Microsoft.AspNetCore.Mvc;
 namespace Altairis.ConventionalMetadataProviders {
     public static class MvcOptionsExtensions {
 
-        public static void SetConventionalMetadataProviders<TDisplayResource>(this MvcOptions options) {
-            options.SetConventionalMetadataProviders(typeof(TDisplayResource));
-        }
+        public static void SetConventionalMetadataProviders<TDisplayResource>(this MvcOptions options)
+            => options.SetConventionalMetadataProviders(typeof(TDisplayResource));
 
-        public static void SetConventionalMetadataProviders<TDisplayResource, TValidationResource>(this MvcOptions options) {
-            options.SetConventionalMetadataProviders(typeof(TDisplayResource), typeof(TValidationResource));
-        }
+        public static void SetConventionalMetadataProviders<TDisplayResource, TValidationResource>(this MvcOptions options)
+            => options.SetConventionalMetadataProviders(typeof(TDisplayResource), typeof(TValidationResource));
 
-        public static void SetConventionalMetadataProviders<TDisplayResource, TValidationResource, TBindingResource>(this MvcOptions options) {
-            options.SetConventionalMetadataProviders(typeof(TDisplayResource), typeof(TValidationResource), typeof(TBindingResource));
-        }
+        public static void SetConventionalMetadataProviders<TDisplayResource, TValidationResource, TBindingResource>(this MvcOptions options)
+            => options.SetConventionalMetadataProviders(typeof(TDisplayResource), typeof(TValidationResource), typeof(TBindingResource));
 
         public static void SetConventionalMetadataProviders(this MvcOptions options, Type displayMetadataResourceType, Type validationResourceType = null, Type bindingResourceType = null) {
             if (options == null) throw new ArgumentNullException(nameof(options));
