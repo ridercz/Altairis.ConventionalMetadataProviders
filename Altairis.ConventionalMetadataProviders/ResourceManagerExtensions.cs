@@ -16,16 +16,26 @@ namespace Altairis.ConventionalMetadataProviders {
                 ? metadataIdentity.ContainerType.FullName + "." + metadataIdentity.Name
                 : metadataIdentity.Name;
 
+            if (string.IsNullOrWhiteSpace(resourceKeySuffix))
+            {
+                resourceKeySuffix = string.Empty;
+            }
+            else
+            {
+                resourceKeySuffix = "_" + resourceKeySuffix;
+            }
+
             // Search by name from more specific to less specific
-            var nameParts = fullPropertyName.Split('.', '+');
-            for (var i = 0; i < nameParts.Length; i++) {
+            var resourceKeyName = fullPropertyName.Replace('.', '_').Replace('+', '_');
+            var namePartsCount = resourceKeyName.Length - resourceKeyName.Replace("_", string.Empty).Length + 1;
+            resourceKeyName += resourceKeySuffix;
+
+            for (var i = 0; i < namePartsCount; i++) {
                 // Get the resource key to lookup
-                var resourceKeyName = string.Join("_", nameParts.Skip(i));
-                if (!string.IsNullOrWhiteSpace(resourceKeySuffix)) resourceKeyName += "_" + resourceKeySuffix;
+                if (i > 0) resourceKeyName = resourceKeyName.Substring(resourceKeyName.IndexOf("_") + 1);
 
                 // Check if given value exists in resource
-                var keyExists = !string.IsNullOrWhiteSpace(resourceManager.GetString(resourceKeyName));
-                if (keyExists) return resourceKeyName;
+                if (resourceManager.GetString(resourceKeyName) != null) return resourceKeyName;
             }
 
             // Not found
