@@ -40,10 +40,10 @@ namespace Altairis.ConventionalMetadataProviders {
                 if (attributeName.EndsWith(AttributeNameSuffix, StringComparison.Ordinal)) attributeName = attributeName.Substring(0, attributeName.Length - AttributeNameSuffix.Length);
 
                 // Link to resource if exists
-                var resourceKey = this._resourceManager.GetResourceKeyName(context.Key, attributeName);
+                var resourceKey = this._resourceManager.GetResourceKeyName(context.Key, attributeName, allowSuffixOnly: true);
                 if (resourceKey != null) {
                     validationAttribute.ErrorMessageResourceType = this._resourceType;
-                    validationAttribute.ErrorMessageResourceName = attributeName;
+                    validationAttribute.ErrorMessageResourceName = resourceKey;
                     validationAttribute.ErrorMessage = null;
                 } else {
                     validationAttribute.ErrorMessage = $"Missing resource key for '{attributeName}'.";
