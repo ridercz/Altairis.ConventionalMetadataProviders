@@ -31,9 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Display.cs-CZ.resx">
-      <Generator></Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Display.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Display.Designer.cs</LastGenOutput>
@@ -41,9 +38,6 @@
     <EmbeddedResource Update="Resources\AdditionalValidation.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AdditionalValidation.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\UI.cs-CZ.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources\UI.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
