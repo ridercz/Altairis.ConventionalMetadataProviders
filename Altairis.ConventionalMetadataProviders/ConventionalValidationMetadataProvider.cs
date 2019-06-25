@@ -8,15 +8,16 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
 namespace Altairis.ConventionalMetadataProviders {
     public class ConventionalValidationMetadataProvider : IValidationMetadataProvider {
         private const string AttributeNameSuffix = "Attribute";
-        private readonly ResourceManager _resourceManager;
-        private readonly Type _resourceType;
+
+        private readonly ResourceManager resourceManager;
+        private readonly Type resourceType;
 
         public ConventionalValidationMetadataProvider() : this(typeof(Resources.DefaultValidationMessages)) {
         }
 
         public ConventionalValidationMetadataProvider(Type resourceType) {
-            this._resourceType = resourceType ?? throw new ArgumentNullException(nameof(resourceType));
-            this._resourceManager = new ResourceManager(resourceType);
+            this.resourceType = resourceType ?? throw new ArgumentNullException(nameof(resourceType));
+            this.resourceManager = new ResourceManager(resourceType);
         }
 
         public void CreateValidationMetadata(ValidationMetadataProviderContext context) {
@@ -39,9 +40,9 @@ namespace Altairis.ConventionalMetadataProviders {
                 if (attributeName.EndsWith(AttributeNameSuffix, StringComparison.Ordinal)) attributeName = attributeName.Substring(0, attributeName.Length - AttributeNameSuffix.Length);
 
                 // Link to resource if exists
-                var resourceKey = this._resourceManager.GetResourceKeyName(context.Key, attributeName, allowSuffixOnly: true);
+                var resourceKey = this.resourceManager.GetResourceKeyName(context.Key, attributeName, allowSuffixOnly: true);
                 if (resourceKey != null) {
-                    validationAttribute.ErrorMessageResourceType = this._resourceType;
+                    validationAttribute.ErrorMessageResourceType = this.resourceType;
                     validationAttribute.ErrorMessageResourceName = resourceKey;
                     validationAttribute.ErrorMessage = null;
                 } else {
