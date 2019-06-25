@@ -28,8 +28,7 @@ namespace Altairis.ConventionalMetadataProviders {
             }
 
             foreach (var attribute in context.ValidationMetadata.ValidatorMetadata) {
-                var validationAttribute = attribute as ValidationAttribute;
-                if (validationAttribute == null) continue; // Not a validation attribute
+                if (!(attribute is ValidationAttribute validationAttribute)) continue; // Not a validation attribute
 
                 // Do nothing if custom error message or localization options are specified
                 if (!(string.IsNullOrWhiteSpace(validationAttribute.ErrorMessage) || attribute is DataTypeAttribute)) continue;
